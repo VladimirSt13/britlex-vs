@@ -1,0 +1,15 @@
+@mixin big-mobile() {
+  @media screen and (min-width: $big-mobile) {
+    @content;
+  }
+}
+@mixin tablet() {
+  @media screen and (min-width: $tablet) {
+    @content;
+  }
+}
+@mixin desktop() {
+  @media screen and (min-width: $desktop) {
+    @content;
+  }
+}

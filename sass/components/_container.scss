@@ -1,0 +1,20 @@
+.container {
+  padding: 25px 15px 25px 15px;
+  width: 320px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+
+  @include big-mobile() {
+    padding: 40px 33px;
+    width: $big-mobile - 219px;
+  }
+  @include tablet() {
+    padding: 40px 40px;
+    width: $tablet;
+  }
+  @include desktop() {
+    padding: 90px 15px;
+    width: $desktop;
+  }
+}

@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Заголовок страницы</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css"
+      integrity="sha512-ISS7cAi1PEhQ8jnbJpJZMd29NlhNj4AWYyLOSp2CE/CsHxTCu+r+t0D2yoJudVrd0/8fTVPUVDzY5Tvli75u/g=="
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Homemade+Apple&family=Poppins:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/main.min.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__container container">
+        <a href="" class="header__logo logo">Brit<span class="logo__accent">lex</span></a>
+        <div class="header__menu menu" id="menu" data-menu>
+          <div class="backdrop backdrop--is-hidden" backdrop-menu>
+            <div class="menu__container">
+              <button
+                type="button"
+                class="menu__close-btn menu-close-btn"
+                aria-expanded="false"
+                aria-controls="menu"
+                data-menu-close-button
+              >
+                <div class="menu__icon-close menu-close-btn__icon-close"></div>
+              </button>
+              <nav class="header__nav">
+                <ul class="header__list">
+                  <li class="header__item">
+                    <a class="header__link link" href="">Home</a>
+                  </li>
+                  <li class="header__item">
+                    <a class="header__link link" href="">Skills</a>
+                  </li>
+                  <li class="header__item">
+                    <a class="header__link link" href="">About us</a>
+                  </li>
+                  <li class="header__item">
+                    <a class="header__link link" href="">Pricing</a>
+                  </li>
+                  <li class="header__item">
+                    <a class="header__link link" href="">Contacts</a>
+                  </li>
+                </ul>
+              </nav>
+              <button type="button" class="header__button button">Let’s Talk</button>
+            </div>
+          </div>
+        </div>
+        <button
+          type="button"
+          class="menu__btn menu-btn"
+          aria-expanded="false"
+          aria-controls="menu"
+          data-menu-button
+        >
+          <div class="menu__icon-close menu-btn__icon-menu"><span></span></div>
+        </button>
+      </div>
+    </header>
+    <main>
+      <section class="hero">
+        <div class="hero__container container">
+          <div class="hero__content">
+            <div class="hero__title--wrapper">
+              <h1 class="hero__title"><span>Learn</span> Any Foreign Language</h1>
+              <svg class="hero__title-icon" width="85" height="85">
+                <use href="./images/symbol-defs.svg#icon-light-bulb"></use>
+              </svg>
+            </div>
+            <p class="hero__text">
+              With our teachers who write a program for each student, you will be able to make your
+              first sketch after the first lesson.
+            </p>
+            <button type="button" class="hero__button">Get started</button>
+          </div>
+          <svg class="hero__image">
+            <use href="./images/symbol-defs.svg#hero-img"></use>
+          </svg>
+        </div>
+      </section>
+      <section class="skills">
+        <div class="skills__container container">
+          <h2 class="skills__title title">Skills</h2>
+          <ul class="skills__list">
+            <li class="skills__item item-skill">
+              <svg class="item-skill__image">
+                <use href="./images/symbol-defs.svg#img-speaking"></use>
+              </svg>
+              <div class="item-skill__content">
+                <h3 class="item-skill__title">Speaking</h3>
+                <p class="item-skill__text">
+                  Improve your English skills and confidence. Live classes and interactive lessons
+                  online. 20% extra free for a limited time only.
+                </p>
+                <p class="item-skill__text">
+                  Learn English online and improve your skills through our high-quality courses and
+                  resources – all designed for adult language learners.
+                </p>
+                <a href="" class="item-skill__button">Learn more</a>
+              </div>
+            </li>
+            <li class="skills__item item-skill">
+              <svg class="item-skill__image">
+                <use href="./images/symbol-defs.svg#img-writing"></use>
+              </svg>
+              <div class="item-skill__content">
+                <h3 class="item-skill__title">Writing</h3>
+                <p class="item-skill__text">
+                  One of the most important and extensive areas of natural science, the science that
+                  studies substances, also their composition.
+                </p>
+                <a href="" class="item-skill__button">Learn more</a>
+              </div>
+            </li>
+            <li class="skills__item item-skill">
+              <svg class="item-skill__image">
+                <use href="./images/symbol-defs.svg#img-reading"></use>
+              </svg>
+              <div class="item-skill__content">
+                <h3 class="item-skill__title">Reading</h3>
+                <p class="item-skill__text">
+                  Perception and response actions of the user resulting from the use and or up
+                  coming use of the product, system or service.
+                </p>
+                <a href="" class="item-skill__button">Learn more</a>
+              </div>
+            </li>
+            <li class="skills__item item-skill">
+              <svg class="item-skill__image">
+                <use href="./images/symbol-defs.svg#img-listening"></use>
+              </svg>
+              <div class="item-skill__content">
+                <h3 class="item-skill__title">Listening</h3>
+                <p class="item-skill__text">
+                  Here you can find activities to practise your listening skills. Listening will
+                  help you to improve your understanding.
+                </p>
+                <a href="" class="item-skill__button">Learn more</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="about">
+        <div class="about__container container">
+          <h2 class="about__title title">About Us</h2>
+          <div class="about__content--wrapper">
+            <div class="about__content">
+              <p class="about__text">
+                The model offers a framework for discussing problems related to the user's
+                experience, as well as possible ways and means of solving them. Application
+                development begins at the top level (strategy), where the future software product is
+                described quite abstractly from the point of view of the expectations of both users
+                and the customer.
+              </p>
+              <ul class="about__list list-about">
+                <li class="about__item">
+                  <span class="list-about__quantity">800</span>
+                  <span class="list-about__object">Pupils</span>
+                </li>
+                <li class="about__item">
+                  <span class="list-about__quantity">18</span>
+                  <span class="list-about__object">Teachers</span>
+                </li>
+                <li class="about__item">
+                  <span class="list-about__quantity">6</span>
+                  <span class="list-about__object">Foreign languages</span>
+                </li>
+              </ul>
+            </div>
+            <svg class="about__image">
+              <use href="./images/symbol-defs.svg#img-about"></use>
+            </svg>
+          </div>
+        </div>
+      </section>
+      <section class="pricing">
+        <div class="pricing__container container">
+          <h2 class="pricing__title title">Pricing</h2>
+          <ul class="pricing__list">
+            <li class="pricing__item item-pricing">
+              <svg class="item-pricing__image" width="426" height="320">
+                <use href="./images/symbol-defs.svg#img-self-study"></use>
+              </svg>
+              <div class="item-pricing__content">
+                <h3 class="item-pricing__title">Self-study online course</h3>
+                <p class="item-pricing__text">
+                  Start learning English online in live classes with qualified EC teachers and
+                  students from all over the world.
+                </p>
+              </div>
+              <div class="item-pricing__price"><span>£5.99</span>per month</div>
+            </li>
+            <li class="pricing__item item-pricing">
+              <svg class="item-pricing__image" width="426" height="320">
+                <use href="./images/symbol-defs.svg#img-live-study"></use>
+              </svg>
+              <div class="item-pricing__content">
+                <h3 class="item-pricing__title">Live online classes</h3>
+                <p class="item-pricing__text">
+                  Interactive group classes with expert teachers. Free 7-day trial.
+                </p>
+              </div>
+              <div class="item-pricing__price"><span>£12.99</span>per month</div>
+            </li>
+            <li class="pricing__item item-pricing">
+              <svg class="item-pricing__image" width="426" height="320">
+                <use href="./images/symbol-defs.svg#img-personal-study"></use>
+              </svg>
+              <div class="item-pricing__content">
+                <h3 class="item-pricing__title">Personal Tuition</h3>
+                <p class="item-pricing__text">
+                  Online one-to-one English tutoring – enjoy our first session for only $1.
+                </p>
+              </div>
+              <div class="item-pricing__price"><span>£20.99</span>per month</div>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="contact">
+        <div class="contact__container container">
+          <h2 class="contact__title title">Contact Us</h2>
+          <div class="contact__content--wrapper">
+            <div class="contact__content">
+              <p class="contact__text">
+                Discover your current English level by taking our free online English test. Sign up
+                to our newsletter for learning tips and free resource.
+              </p>
+              <form class="contact__form">
+                <label class="contact__label">
+                  <input
+                    class="contact__input"
+                    type="email"
+                    name="contact-email"
+                    value=""
+                    placeholder="Enter Your E-mail"
+                  />
+                </label>
+                <button type="submit" class="contact__button">Subscribe</button>
+              </form>
+            </div>
+            <svg class="contact__image" width="425" height="430">
+              <use href="./images/symbol-defs.svg#img-contact"></use>
+            </svg>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="footer__container container">
+        <div class="footer__wrapper">
+          <a href="" class="footer__logo logo">Brit<span class="logo__accent">lex</span></a>
+          <ul class="footer__list list">
+            <li class="footer__item"><a href="" class="footer__link">Terms and Conditions</a></li>
+            <li class="footer__item"><span>•</span></li>
+            <li class="footer__item"><a href="" class="footer__link">Privacy Policy</a></li>
+            <li class="footer__item"><span>•</span></li>
+            <li class="footer__item"><a href="" class="footer__link">Cookie Policy</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    <script src="./js/menu.js"></script>
+  </body>
+</html>

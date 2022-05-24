@@ -1,0 +1,136 @@
+.header {
+  &__container {
+    display: flex;
+    justify-content: space-between;
+
+    position: relative;
+
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 25px;
+    padding-bottom: 20px;
+
+    justify-content: space-between;
+    @include big-mobile() {
+      padding-top: 50px;
+      padding-bottom: 45px;
+    }
+    @include tablet() {
+      padding-top: 40px;
+      padding-bottom: 20px;
+    }
+    @include desktop() {
+      padding-top: 72px;
+      max-width: 1338px;
+    }
+
+    align-items: center;
+  }
+
+  &__logo {
+    z-index: 2;
+  }
+  &__menu {
+  }
+}
+
+.header__nav {
+  @media screen and (max-width: ($big-mobile - 1px)) {
+    padding-top: 48px;
+  }
+  @media screen and(min-width: $big-mobile) and (max-width: ($desktop - 1px)) {
+    padding-top: 35px;
+  }
+  @media screen and(max-width: ($desktop - 1px)) {
+    border-top: 1px solid #c4c4c4;
+  }
+}
+.header__list {
+  @media screen and (max-width: ($big-mobile - 1px)) {
+    margin-bottom: 70px;
+  }
+  @media screen and (min-width: $big-mobile) and (max-width: ($tablet - 1px)) {
+    margin-bottom: 80px;
+  }
+  @media screen and (min-width: $tablet) and (max-width: ($big-mobile - 1px)) {
+    margin-bottom: 62px;
+  }
+  @include desktop {
+    display: flex;
+  }
+}
+.header__item {
+}
+.header__item:not(:last-child) {
+  @include desktop {
+    margin-right: 50px;
+  }
+}
+
+.header__link {
+  padding-top: 5px;
+  padding-bottom: 5px;
+
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 2.9545;
+  color: #263238;
+
+  &:hover,
+  &:focus {
+    color: #939393;
+  }
+
+  @include big-mobile() {
+    font-size: 24px;
+    line-height: 2.71;
+  }
+  @include tablet() {
+    font-size: 22px;
+    line-height: 2.73;
+  }
+  @include desktop() {
+    font-size: 20px;
+    line-height: 1.5;
+  }
+}
+
+.link {
+}
+
+.header__button {
+  display: block;
+  width: 100%;
+  max-width: 291px;
+  height: 65px;
+
+  font-size: 20px;
+  line-height: 1.5;
+
+  background-color: #ffffff;
+  border: 2px solid #263238;
+  border-radius: 5px;
+
+  &:hover,
+  &:focus {
+    background-color: #939393;
+  }
+
+  @include big-mobile() {
+    max-width: 330px;
+    height: 70px;
+    font-size: 22px;
+  }
+  @include tablet {
+    max-width: 210px;
+    height: 60px;
+    font-size: 18px;
+  }
+
+  @include desktop() {
+    max-width: 312px;
+    height: 70px;
+    margin-left: 121px;
+    letter-spacing: 0.03em;
+  }
+}

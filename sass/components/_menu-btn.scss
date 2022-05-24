@@ -1,0 +1,47 @@
+.menu-btn {
+  $color-btn: #39515e;
+  $color-btn-hover: #939393;
+
+  // display: block;
+  position: relative;
+  width: 34px;
+  height: 34px;
+  border: none;
+  background-color: #fff;
+
+  &:hover &__icon-menu span,
+  &:hover &__icon-menu::before,
+  &:hover &__icon-menu::after,
+  &:focus &__icon-menu span,
+  &:focus &__icon-menu::before,
+  &:focus &__icon-menu::after {
+    background-color: $color-btn-hover;
+  }
+
+  &__icon-menu {
+    display: flex;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 33.5px;
+    height: 18px;
+    flex-direction: column;
+    justify-content: space-between;
+
+    & span {
+      height: 3.5px;
+      background-color: $color-btn;
+    }
+
+    &::before,
+    &::after {
+      content: '';
+      height: 3.5px;
+      background-color: $color-btn;
+    }
+    &::after {
+      width: 23.7px;
+    }
+  }
+}

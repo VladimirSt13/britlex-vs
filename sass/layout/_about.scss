@@ -1,0 +1,132 @@
+.about {
+  &__container {
+  }
+
+  &__title {
+    @media screen and (min-width: $tablet) and (max-deskop: ($tablet - 1px)) {
+      margin-bottom: 0;
+    }
+    @include tablet() {
+      text-align: left;
+    }
+  }
+
+  &__content--wrapper {
+    position: relative;
+    @media screen and (max-width: ($tablet - 1px)) {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+  }
+
+  &__content {
+    @include tablet() {
+      width: 325px;
+    }
+    @include desktop() {
+      width: 655px;
+    }
+  }
+
+  &__text {
+    font-size: 13px;
+    line-height: 1.5;
+    text-align: center;
+
+    color: #8f95a5;
+
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+
+    @include tablet() {
+      font-size: 14px;
+      text-align: left;
+    }
+
+    @include desktop() {
+      font-size: 20px;
+      line-height: 1.8;
+    }
+  }
+
+  &__list {
+    @include tablet() {
+      display: flex;
+      justify-content: space-between;
+    }
+    @include desktop() {
+      justify-content: space-around;
+    }
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @media screen and (max-width: ($tablet - 1px)) {
+      &:not(:last-child) {
+        margin-bottom: 55px;
+      }
+    }
+    @include desktop() {
+      width: 110px;
+    }
+  }
+
+  &__image {
+    width: 290px;
+    height: 290px;
+    margin-left: auto;
+    margin-right: auto;
+    @media screen and (max-width: ($tablet - 1px)) {
+      margin-bottom: 25px;
+    }
+    @include tablet() {
+      position: absolute;
+      width: 295px;
+      height: 295px;
+      bottom: 0px;
+      right: 0px;
+    }
+    @include desktop() {
+      width: 540px;
+      height: 540px;
+    }
+  }
+}
+
+.list-about {
+  &__quantity {
+    font-weight: 600;
+    font-size: 24px;
+
+    color: #2a3246;
+
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+    @include tablet() {
+      font-size: 22px;
+      &:not(:last-child) {
+        margin-bottom: 15px;
+      }
+    }
+    @include desktop() {
+      font-size: 48px;
+    }
+  }
+
+  &__object {
+    font-size: 15px;
+    text-align: center;
+
+    color: #8f95a5;
+    @include tablet() {
+      font-size: 13px;
+    }
+    @include desktop() {
+      font-size: 20px;
+    }
+  }
+}

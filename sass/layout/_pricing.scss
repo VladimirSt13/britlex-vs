@@ -1,0 +1,137 @@
+.pricing {
+  &__container {
+  }
+
+  &__title {
+  }
+
+  &__list {
+    @include tablet() {
+      display: flex;
+      gap: 30px;
+    }
+  }
+
+  &__item {
+    flex-basis: 33.33%;
+  }
+
+  &__item:not(:last-child) {
+    @media screen and (max-width: ($tablet - 1px)) {
+      margin-bottom: 63px;
+    }
+  }
+}
+.item-pricing {
+  display: flex;
+  flex-direction: column;
+  &__image {
+    width: 290px;
+    height: 220px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+
+    @include tablet() {
+      width: 205px;
+      height: 150px;
+    }
+    @include desktop() {
+      width: 426px;
+      height: 320px;
+    }
+  }
+
+  &__content {
+    flex-grow: 1;
+  }
+
+  &__title {
+    margin-bottom: 17px;
+
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 1.56;
+    @media screen and (max-width: ($tablet - 1px)) {
+      text-align: center;
+    }
+
+    color: #263238;
+
+    @include tablet() {
+      margin-bottom: 15px;
+      font-size: 20px;
+      line-height: 1.4;
+    }
+    @media screen and (min-width: $tablet) and (max-width: ($desktop - 1px)) {
+      width: 160px;
+    }
+    @include desktop() {
+      margin-bottom: 20px;
+      font-size: 30px;
+      line-height: 1.6;
+    }
+  }
+
+  &__text {
+    margin-bottom: 30px;
+
+    font-size: 13px;
+    line-height: 1.5;
+    @media screen and (max-width: ($tablet - 1px)) {
+      text-align: center;
+    }
+
+    color: #8f95a5;
+
+    @include tablet() {
+      margin-bottom: 20px;
+      font-size: 14px;
+    }
+    @include desktop() {
+      margin-bottom: 30px;
+      font-size: 20px;
+    }
+  }
+
+  &__price {
+    margin-left: auto;
+    margin-right: auto;
+    padding: 5px 15px;
+    width: 170px;
+    text-align: center;
+    font-size: 14px;
+    line-height: 1.5;
+
+    color: #546269;
+    background-color: #eeeeee;
+    border-radius: 5px;
+
+    & span {
+      margin-right: 7px;
+      font-size: 18px;
+      line-height: 1.5;
+      color: #263238;
+    }
+
+    @include tablet() {
+      width: 205px;
+      font-size: 16px;
+
+      & span {
+        margin-right: 12px;
+        font-size: 22px;
+      }
+    }
+    @include desktop() {
+      margin-left: 0;
+      width: 260px;
+      font-size: 18px;
+
+      & span {
+        margin-right: 30px;
+        font-size: 24px;
+      }
+    }
+  }
+}

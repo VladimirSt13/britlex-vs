@@ -1,0 +1,15 @@
+.logo {
+  font-size: 24px;
+  line-height: 1.5;
+  color: var(--prime-title-color);
+  &__accent {
+    color: #939393;
+  }
+  @include big-mobile() {
+    font-size: 30px;
+  }
+  @include desktop() {
+    font-size: 36px;
+    letter-spacing: 0.03em;
+  }
+}

@@ -1,0 +1,66 @@
+.footer {
+  &__container {
+    text-align: center;
+    @include tablet() {
+      padding-bottom: 0;
+      padding-top: 0;
+    }
+  }
+
+  &__wrapper {
+    border-top: 1px solid #c4c4c4;
+    @include tablet() {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-top: 18px;
+      padding-bottom: 15px;
+    }
+    @include desktop() {
+      padding-top: 22px;
+      padding-bottom: 77px;
+    }
+  }
+  &__logo {
+    display: inline-block;
+    @media screen and (max-width: ($tablet - 1px)) {
+      margin-top: 26px;
+      margin-bottom: 15px;
+    }
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__item {
+    font-weight: 500;
+    font-size: 11px;
+    line-height: 1.5;
+
+    color: #8f95a5;
+    @include tablet() {
+      font-size: 13px;
+      &:not(:last-child) {
+        margin-right: 4px;
+      }
+    }
+    @include desktop() {
+      font-size: 24px;
+      letter-spacing: 0.02em;
+      &:nth-child(even) {
+        display: none;
+      }
+      &:not(:last-child) {
+        margin-right: 80px;
+      }
+    }
+  }
+
+  &__link {
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
