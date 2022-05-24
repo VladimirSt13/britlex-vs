@@ -72,6 +72,11 @@
     padding: 0 26px;
     border: 1px solid #8f95a5;
     border-radius: 5px;
+    outline: none;
+
+    &:focus {
+      box-shadow: 0 0 10px #8f95a5;
+    }
 
     &::placeholder {
       font-size: 12px;
@@ -112,6 +117,10 @@
     font-weight: 500;
     font-size: 14px;
     line-height: 1.5;
+    &:hover,
+    &:focus {
+      background-color: #939393;
+    }
 
     @include tablet() {
       width: 145px;

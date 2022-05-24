@@ -89,6 +89,10 @@
     background-color: #263238;
     border-radius: 5px;
     color: #ffffff;
+    &:hover,
+    &:focus {
+      background-color: #939393;
+    }
     @include tablet() {
       padding: 14px 43px;
       font-size: 16px;

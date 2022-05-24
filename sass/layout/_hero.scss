@@ -120,6 +120,11 @@
     background-color: #263238;
     border-radius: 5px;
 
+    &:hover,
+    &:focus {
+      background-color: #939393;
+    }
+
     @include tablet() {
       width: 236px;
       height: 65px;
