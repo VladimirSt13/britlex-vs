@@ -3,13 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Заголовок страницы</title>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css"
-      integrity="sha512-ISS7cAi1PEhQ8jnbJpJZMd29NlhNj4AWYyLOSp2CE/CsHxTCu+r+t0D2yoJudVrd0/8fTVPUVDzY5Tvli75u/g=="
-      crossorigin="anonymous"
-    />
+    <title>Britlex</title>
+
     <link
       href="https://fonts.googleapis.com/css2?family=Homemade+Apple&family=Poppins:wght@400;500;600&display=swap"
       rel="stylesheet"
@@ -20,53 +15,53 @@
     <header class="header">
       <div class="header__container container">
         <a href="" class="header__logo logo">Brit<span class="logo__accent">lex</span></a>
-        <div class="header__menu menu" id="menu" data-menu>
+        <div class="header__menu menu" data-menu id="menu">
           <div class="backdrop backdrop--is-hidden" backdrop-menu>
-            <div class="menu__container">
-              <button
-                type="button"
-                class="menu__close-btn menu-close-btn"
-                aria-expanded="false"
-                aria-controls="menu"
-                data-menu-close-button
-              >
-                <div class="menu__icon-close menu-close-btn__icon-close"></div>
-              </button>
-              <nav class="header__nav">
-                <ul class="header__list">
-                  <li class="header__item">
-                    <a class="header__link link" href="">Home</a>
+            <button
+              type="button"
+              class="menu__button-open-menu"
+              aria-expanded="false"
+              aria-controls="menu"
+              menu-button
+            >
+              <div class="menu__icon-open"><span></span></div>
+            </button>
+            <nav class="menu__body">
+              <div class="menu__container">
+                <button
+                  type="button"
+                  class="menu__button-close-menu"
+                  aria-expanded="false"
+                  aria-controls="menu"
+                  menu-close-button
+                >
+                  <div class="menu__icon-close"></div>
+                </button>
+                <ul class="menu__list">
+                  <li class="menu__item">
+                    <a class="menu__link link" href="">Home</a>
                   </li>
-                  <li class="header__item">
-                    <a class="header__link link" href="">Skills</a>
+                  <li class="menu__item">
+                    <a class="menu__link link" href="">Skills</a>
                   </li>
-                  <li class="header__item">
-                    <a class="header__link link" href="">About us</a>
+                  <li class="menu__item">
+                    <a class="menu__link link" href="">About us</a>
                   </li>
-                  <li class="header__item">
-                    <a class="header__link link" href="">Pricing</a>
+                  <li class="menu__item">
+                    <a class="menu__link link" href="">Pricing</a>
                   </li>
-                  <li class="header__item">
-                    <a class="header__link link" href="">Contacts</a>
+                  <li class="menu__item">
+                    <a class="menu__link link" href="">Contacts</a>
                   </li>
                 </ul>
-              </nav>
-              <button type="button" class="header__button button">Let’s Talk</button>
-            </div>
+                <button type="button" class="menu__button button">Let’s Talk</button>
+              </div>
+            </nav>
           </div>
         </div>
-        <button
-          type="button"
-          class="menu__btn menu-btn"
-          aria-expanded="false"
-          aria-controls="menu"
-          data-menu-button
-        >
-          <div class="menu__icon-close menu-btn__icon-menu"><span></span></div>
-        </button>
       </div>
     </header>
-    <main>
+    <main class="page">
       <section class="hero">
         <div class="hero__container container">
           <div class="hero__content">

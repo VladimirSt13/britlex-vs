@@ -6,7 +6,7 @@
       align-self: start;
     }
     align-items: center;
-    padding-top: 0px;
+    padding-top: 20px;
     @include tablet() {
       justify-content: space-between;
       align-items: flex-end;

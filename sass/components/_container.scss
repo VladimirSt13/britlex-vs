@@ -7,7 +7,7 @@
 
   @include big-mobile() {
     padding: 40px 33px;
-    width: $big-mobile - 219px;
+    width: $big-mobile;
   }
   @include tablet() {
     padding: 40px 40px;

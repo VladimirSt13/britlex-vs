@@ -1,58 +1,58 @@
-.menu-close-btn {
-  $color-btn: #39515e;
-  $color-btn-hover: #939393;
+// .menu-close-btn {
+//   $color-btn: #39515e;
+//   $color-btn-hover: #939393;
 
-  position: absolute;
-  top: 25px;
-  right: 7px;
+//   position: absolute;
+//   top: 25px;
+//   right: 7px;
 
-  @mixin big-mobile() {
-    top: 54px;
-    right: 23px;
-  }
-  @mixin tablet() {
-    top: 22px;
-    right: 15px;
-  }
+//   @mixin big-mobile() {
+//     top: 54px;
+//     right: 23px;
+//   }
+//   @mixin tablet() {
+//     top: 22px;
+//     right: 15px;
+//   }
 
-  width: 34px;
-  height: 34px;
-  border: none;
-  background-color: #fff;
-  overflow: hidden;
+//   width: 34px;
+//   height: 34px;
+//   border: none;
+//   background-color: #fff;
+//   overflow: hidden;
 
-  &:hover &__icon-close::before,
-  &:hover &__icon-close::after,
-  &:focus &__icon-close::before,
-  &:focus &__icon-close::after {
-    background-color: $color-btn-hover;
-  }
+//   &:hover &__icon-close::before,
+//   &:hover &__icon-close::after,
+//   &:focus &__icon-close::before,
+//   &:focus &__icon-close::after {
+//     background-color: $color-btn-hover;
+//   }
 
-  &__icon-close {
-    display: flex;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 25px;
-    height: 25px;
+//   &__icon-close {
+//     display: flex;
+//     position: absolute;
+//     top: 50%;
+//     left: 50%;
+//     transform: translate(-50%, -50%);
+//     width: 25px;
+//     height: 25px;
 
-    &::before,
-    &::after {
-      content: '';
-      position: absolute;
-      top: 50%;
-      left: 0;
-      width: 100%;
-      background-color: $color-btn;
-      height: 3.5px;
-      border-radius: 1px;
-    }
-    &::before {
-      transform: rotate(-45deg);
-    }
-    &::after {
-      transform: rotate(45deg);
-    }
-  }
-}
+//     &::before,
+//     &::after {
+//       content: '';
+//       position: absolute;
+//       top: 50%;
+//       left: 0;
+//       width: 100%;
+//       background-color: $color-btn;
+//       height: 3.5px;
+//       border-radius: 1px;
+//     }
+//     &::before {
+//       transform: rotate(-45deg);
+//     }
+//     &::after {
+//       transform: rotate(45deg);
+//     }
+//   }
+// }

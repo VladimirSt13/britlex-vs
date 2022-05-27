@@ -1,77 +1,283 @@
 .menu {
-  display: block;
-  position: fixed;
+  $color-menu-btn: #39515e;
+  $color-menu-btn-hover: #939393;
 
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  transform: translateY(-101%);
-  overflow-y: auto;
-  @media screen and (max-width: ($big-mobile - 1px)) {
+  &__button-open-menu {
+    display: block;
+    width: 33px;
+    height: 20px;
+    padding: 0;
+    border: none;
     background-color: #fff;
-  }
-  z-index: 1;
-
-  transition: transform 250ms;
-
-  &__container {
-    position: relative;
-    @media screen and (max-width: ($big-mobile - 1px)) {
-      padding: 81px 15px 0;
-      max-width: 320px;
+    cursor: pointer;
+    @include desktop() {
+      display: none;
     }
-    margin-left: auto;
-    margin-right: auto;
+  }
+  @media screen and(max-width: ($tablet - 1px)) {
+    &.is-open &__button-open-menu {
+      display: none;
+    }
+  }
+
+  &__icon-open {
+    z-index: 5;
+    position: relative;
     width: 100%;
     height: 100%;
-    background-color: #ffffff;
 
-    @media screen and (min-width: $big-mobile) and (max-width: ($tablet - 1px)) {
-      max-width: 575px;
-      padding: 137px 33px 0;
+    &::before,
+    &::after,
+    & span {
+      left: 0;
+      position: absolute;
+      height: 3px;
+      width: 100%;
+      background-color: $color-menu-btn;
+      border-radius: 1px;
     }
-    @media screen and (min-width: $tablet) and (max-width: ($desktop - 1px)) {
-      width: 430px;
-      margin-left: calc((100% - 767px) / 2);
-      padding: 105px 39px 0 26px;
+    &::before,
+    &::after {
+      content: '';
+    }
+    &::before {
+      top: 0;
+    }
+    &::after {
+      bottom: 0;
+      width: 70%;
+    }
+    & span {
+      top: 50%;
+      transform: scale(1) translate(0, -50%);
+    }
+  }
+
+  &__button-close-menu {
+    display: none;
+    position: fixed;
+    right: 15px;
+    top: 25px;
+    z-index: 3;
+    width: 39px;
+    height: 36px;
+    padding: 0;
+    border: none;
+    background-color: #ffffff;
+    cursor: pointer;
+    @include big-mobile() {
+      top: 54px;
+      right: 33px;
+    }
+    @include tablet() {
+      top: 40px;
+      left: 360px;
+    }
+  }
+
+  &__icon-close {
+    z-index: 5;
+    position: relative;
+    width: 20px;
+    height: 20px;
+    $offset: 9.5px;
+    &::before,
+    &::after {
+      content: '';
+      left: 0;
+      position: absolute;
+      height: 3px;
+      width: 100%;
+      background-color: $color-menu-btn;
+      border-radius: 1px;
+      transform-origin: center;
+    }
+    &:before {
+      top: $offset;
+      transform: rotate(-45deg) translate(0, -50%);
+    }
+    &:after {
+      bottom: $offset;
+      transform: rotate(45deg) translate(0, 50%);
+    }
+  }
+  &.is-open &__button-close-menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__body {
+    @media screen and (max-width: ($desktop - 1px)) {
+      position: fixed;
+      top: -100%;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      padding-top: 81px;
+      // transition: top 300ms ease;
+      overflow: auto;
+      background-color: rgb(255, 255, 255);
+      z-index: 2;
+      @include big-mobile() {
+        padding-top: 137px;
+      }
+      @include tablet() {
+        background-color: rgba(7, 34, 47, 0.7);
+        padding-top: 105px;
+      }
+    }
+  }
+
+  &.is-open &__body {
+    top: 0;
+    &::before {
+      content: '';
+      position: fixed;
+      left: 0;
+      top: 0;
+      height: 81px;
+      width: 100%;
+      background-color: #ffffff;
+      z-index: 2;
+      @include big-mobile() {
+        height: 137px;
+      }
+      @include tablet() {
+        height: 105px;
+        width: 429px;
+      }
+    }
+  }
+
+  &__container {
+    @media screen and (max-width: ($desktop - 1px)) {
+      position: relative;
+      max-width: $mobile - 30px;
+      height: auto;
+      margin-left: auto;
+      margin-right: auto;
+
+      padding: 50px 0 20px;
+      @media screen and (min-height: 400px) {
+        height: 100%;
+      }
+      @include big-mobile() {
+        max-width: $big-mobile - 66px;
+        padding-top: 35px;
+      }
+      @include tablet() {
+        max-width: 429px;
+        padding-top: 35px;
+        padding-left: 40px;
+        padding-right: 40px;
+        margin-left: 0;
+        background-color: #ffffff;
+      }
+      &::before {
+        content: '';
+        position: fixed;
+        top: 81px;
+        left: 15px;
+        right: 15px;
+        height: 1px;
+        background-color: #000;
+        opacity: 0;
+        @include big-mobile() {
+          top: 138px;
+          left: 33px;
+          right: 33px;
+        }
+        @include tablet() {
+          top: 105px;
+          left: 40px;
+          width: 429px - 40px * 2;
+        }
+      }
     }
     @include desktop() {
       display: flex;
       align-items: center;
-      justify-content: flex-end;
+    }
+
+    .menu.is-open &::before {
+      opacity: 1;
     }
   }
 
-  &__btn {
-    display: block;
-  }
-  &__btn.is-open {
-    display: none;
+  &__list {
+    margin-bottom: 70px;
+    @include big-mobile() {
+      margin-bottom: 80px;
+    }
     @include tablet() {
-      display: block;
-      z-index: -1;
+      margin-bottom: 60px;
+    }
+    @include desktop() {
+      display: flex;
+      align-items: center;
+      margin-bottom: 0;
+      margin-right: 121px;
     }
   }
-  &__close-btn {
-    display: none;
+
+  &__item:not(:last-child) {
+    @include desktop() {
+      margin-right: 50px;
+    }
   }
-  &__close-btn.is-open {
+
+  &__link {
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 2.95;
+
+    color: #263238;
+    &:hover {
+      text-decoration: underline;
+    }
+
+    @include big-mobile() {
+      font-size: 24px;
+      line-height: 2.71;
+    }
+    @include tablet() {
+      font-size: 22px;
+      line-height: 2.73;
+    }
+    @include desktop() {
+      font-size: 20px;
+      line-height: 1.5;
+    }
+  }
+
+  &__button {
     display: block;
-  }
+    padding: 17px 0;
+    width: 100%;
+    max-width: 330px;
+    border: 2px solid #263238;
+    border-radius: 5px;
+    background-color: #fff;
+    cursor: pointer;
 
-  &.is-open {
-    transform: translateY(0);
-  }
+    font-size: 20px;
+    line-height: 1.5;
 
-  @include desktop() {
-    position: relative;
-    transform: translateY(0);
-    &__btn {
-      display: none;
+    color: #000000;
+    &:hover {
+      background-color: #939393;
     }
-    &__close-btn {
-      display: none;
+    @include big-mobile() {
+      font-size: 22px;
+    }
+    @include tablet() {
+      font-size: 18px;
+    }
+    @include desktop() {
+      width: 312px;
+      font-size: 20px;
+      letter-spacing: 0.03em;
     }
   }
 }

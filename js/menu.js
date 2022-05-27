@@ -1,38 +1,33 @@
+'use-strict';
+
 (() => {
-  const menuBtnRef = document.querySelector('[data-menu-button]');
-  const menuClBtnRef = document.querySelector('[data-menu-close-button]');
+  const menuBtnRef = document.querySelector('[menu-button]');
+  const menuClBtnRef = document.querySelector('[menu-close-button]');
   const mobileMenuRef = document.querySelector('[data-menu]');
-  const Backdrop = document.querySelector('[backdrop-menu]');
-  var body = document.body;
+  const mobileHeaderRef = document.querySelector('.header');
 
   menuBtnRef.addEventListener('click', () => {
     const expanded = menuBtnRef.getAttribute('aria-expanded') === 'true' || false;
 
     menuBtnRef.classList.toggle('is-open');
-    menuClBtnRef.classList.toggle('is-open');
     menuBtnRef.setAttribute('aria-expanded', !expanded);
-    menuClBtnRef.setAttribute('aria-expanded', !expanded);
 
     mobileMenuRef.classList.toggle('is-open');
-    Backdrop.classList.toggle('backdrop--is-hidden');
-    body.classList.toggle('noscroll', !expanded);
+    mobileHeaderRef.classList.toggle('is-open');
 
-    refs.menuBtnRef.addEventListener('click', toggleBackdrop);
-    refs.menuClBtnRef.addEventListener('click', toggleBackdrop);
+    document.body.classList.toggle('noscroll');
   });
 
   menuClBtnRef.addEventListener('click', () => {
     const expanded = menuBtnRef.getAttribute('aria-expanded') === 'true' || false;
 
-    menuBtnRef.classList.toggle('is-open');
-    menuClBtnRef.classList.toggle('is-open');
+    menuBtnRef.classList.remove('is-open');
 
     menuBtnRef.setAttribute('aria-expanded', !expanded);
-    menuClBtnRef.setAttribute('aria-expanded', !expanded);
 
-    mobileMenuRef.classList.toggle('is-open');
-    Backdrop.classList.toggle('backdrop--is-hidden');
+    mobileMenuRef.classList.remove('is-open');
+    mobileHeaderRef.classList.remove('is-open');
 
-    body.classList.toggle('noscroll', !expanded);
+    document.body.classList.remove('noscroll');
   });
 })();
